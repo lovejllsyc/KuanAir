@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    color: #12345a;
+}
+
+header {
+    background: #ffdf00;
+    color: #003b70;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+.card {
+    background: white;
+    max-width: 460px;
+    margin: 35px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #cccccc;
+}
+
+h2, h3 {
+    color: #003b70;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button, .button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    background: #ffdf00;
+    color: #003b70;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background: #ffd000;
+}
+
+.secondary {
+    background: #003b70;
+    color: white;
+}
+
+.secondary:hover {
+    background: #00509a;
+}
+
+.danger {
+    background: #c62828;
+    color: white;
+}
+
+.danger:hover {
+    background: #a51f1f;
+}
+
+.view-link, a {
+    color: #0055a5;
+}
+
+.view-link {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666666;
+    font-size: 13px;
+}
+
+@media (max-width: 500px) {
+    .card {
+        margin: 20px 15px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuan Air | Book a Flight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KUAN AIR</h1>
+        <p>Your Journey Starts Here</p>
+    </header>
+    <main class="card">
+        <h2>Book Your Flight</h2>
+        <form action="CreateReservation.php" method="POST">
+            <label>Passenger Name</label>
+            <input type="text" name="name" required>
+            <label>Departure</label>
+            <select name="departure" required>
+                <option value="">Select departure</option>
+                <option value="Iloilo">Iloilo</option>
+                <option value="Manila">Manila</option>
+                <option value="Cebu">Cebu</option>
+                <option value="Davao">Davao</option>
+            </select>
+            <label>Destination</label>
+            <select name="destination" required>
+                <option value="">Select destination</option>
+                <option value="Iloilo">Iloilo</option>
+                <option value="Manila">Manila</option>
+                <option value="Cebu">Cebu</option>
+                <option value="Davao">Davao</option>
+            </select>
+            <label>Flight Date</label>
+            <input type="date" name="flight_date" required>
+            <button type="submit">Book Now</button>
+        </form>
+
+        <h3>Manage Reservations</h3>
+        <a class="button" href="ReadReservation.php">View Reservations</a>
+
+        <form action="UpdateReservation.php" method="POST">
+            <label>Reservation ID to Update</label>
+            <input type="number" name="id" min="1" required>
+            <label>New Passenger Name</label>
+            <input type="text" name="name" required>
+            <button type="submit">Update Name</button>
+        </form>
+
+        <form action="DeleteReservation.php" method="POST">
+            <label>Reservation ID to Delete</label>
+            <input type="number" name="id" min="1" required>
+            <button type="submit" class="danger">Delete Reservation</button>
+        </form>
+
+        <a class="view-link" href="Logout.php">Log Out</a>
+    </main>
+    <footer>Kuan Air | WIT BSIT Student Project</footer>
+</body>
+</html>
