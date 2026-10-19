@@ -18,4 +18,5 @@ CREATE TABLE IF NOT EXISTS reservations (
 );
 
 
-add via xamp, wamp, workbench kag upload here the repo hehe
+add via xamp, wamp, workbench kag upload here the repo hehe add pa gali inno db;(
+    
