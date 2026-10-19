@@ -16,3 +16,6 @@ CREATE TABLE IF NOT EXISTS reservations (
     flight_date DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+add via xamp, wamp, workbench kag upload here the repo hehe
