@@ -6,23 +6,75 @@
     <title>Kuan Air | Log In</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>KUAN AIR</h1>
-        <p>Log in to continue</p>
-    </header>
-    <main class="card">
-        <h2>Log In</h2>
+
+<body class="auth-page">
+
+
+<header class="navbar">
+    <a href="index.html" class="logo">JETSET<span>GO</span></a>
+    <a href="index.html" class="auth-home-link">← Back to Home</a>
+</header>
+
+
+<main class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="auth-logo">
+            <h1>JETSETGO</h1>
+            <p>Your Journey Starts Here</p>
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="auth-description">
+            Log in to access your flight reservations.
+        </p>
+
         <form action="Login.php" method="POST">
-            <label>Username</label>
-            <input type="text" name="username" required>
-            <label>Password</label>
-            <input type="password" name="password" required>
-            <button type="submit">Log In</button>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-submit">
+    Log In
+</button>
+
         </form>
-        <p class="center">No account yet? <a href="register.html">Register</a></p>
-        <a class="view-link" href="index.html">Back to Home</a>
-    </main>
-    <footer>Kuan Air | WIT BSIT Student Project</footer>
+
+        <p class="auth-link">
+            Don't have an account?
+            <a href="register.html">Create one</a>
+        </p>
+
+        <a class="back-link" href="index.html">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    JETSETGO | WIT BSIT Student Project
+</footer>
+
 </body>
 </html>
