@@ -1,7 +1,7 @@
 <?php
 mysqli_report(MYSQLI_REPORT_OFF);
 
-$conn = mysqli_connect("localhost", "root", "", "kuan_air");
+$conn = mysqli_connect("localhost", "root", "", "jetsetgo");
 
 if (!$conn) {
     die("Unable to connect to the database. Please try again later.");
