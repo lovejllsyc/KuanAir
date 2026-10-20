@@ -1,28 +1,94 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuan Air | Register</title>
+    <title>JetSetGo | Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>KUAN AIR</h1>
-        <p>Create your account</p>
+
+<body class="auth-page register-page">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">JET<span> SETGO</span></a>
+
+        <a href="index.html" class="auth-home-link">
+            ← Back to Home
+        </a>
     </header>
-    <main class="card">
-        <h2>Register</h2>
-        <form action="Register.php" method="POST">
-            <label>Username</label>
-            <input type="text" name="username" required maxlength="50">
-            <label>Password</label>
-            <input type="password" name="password" required minlength="6">
-            <button type="submit">Register</button>
-        </form>
-        <p class="center">Already have an account? <a href="login.html">Log in</a></p>
-        <a class="view-link" href="index.html">Back to Home</a>
+
+    <main class="auth-container">
+        <div class="auth-card">
+
+            <div class="auth-logo">
+                <div class="auth-plane-icon">✈</div>
+                <p class="auth-eyebrow">START YOUR JOURNEY</p>
+                <h1>Create your account.</h1>
+                <p>Your next adventure begins here.</p>
+            </div>
+
+            <div class="auth-heading">
+                <h2>Register</h2>
+                <p>Create an account to book and manage your flights.</p>
+            </div>
+
+            <form action="Register.php" method="POST">
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        maxlength="50"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                    >
+                    <small class="password-hint">
+                        Use at least 6 characters.
+                    </small>
+                </div>
+
+                <button type="submit" class="auth-button">
+                    Create My Account →
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span>ALREADY REGISTERED?</span>
+            </div>
+
+            <p class="auth-link">
+                Already have an account?
+                <a href="login.html">Log in</a>
+            </p>
+
+        </div>
+
+        <p class="auth-bottom-note">
+            ✈ Your journey, our priority.
+        </p>
     </main>
-    <footer>Kuan Air | WIT BSIT Student Project</footer>
+
+    <footer class="auth-footer">
+        © 2026 JESETGO | WIT Student Project
+    </footer>
+
 </body>
 </html>
