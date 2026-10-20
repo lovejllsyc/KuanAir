@@ -3,59 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuan Air | Book a Flight</title>
+    <title>JetSetGo | Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>KUAN AIR</h1>
-        <p>Your Journey Starts Here</p>
-    </header>
-    <main class="card">
-        <h2>Book Your Flight</h2>
+
+<header class="navbar">
+    <div class="logo">JETSETGO</div>
+
+    <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="ReadReservation.php">My Reservations</a>
+        <a href="Logout.php" class="logout">Log Out</a>
+    </nav>
+</header>
+
+<main class="dashboard-container">
+
+    <!-- Welcome -->
+    <section class="welcome">
+        <div>
+            <p class="small-text">WELCOME TO JETSETGO</p>
+            <h1>Where are you flying?</h1>
+            <p>
+                Book your next flight or manage your existing reservations
+                from your dashboard.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+
+        <a href="#book" class="quick-card">
+            <div class="quick-icon">✈</div>
+            <div>
+                <h3>Book a Flight</h3>
+                <p>Create a new flight reservation</p>
+            </div>
+            <span>→</span>
+        </a>
+
+        <a href="ReadReservation.php" class="quick-card">
+            <div class="quick-icon">▣</div>
+            <div>
+                <h3>My Reservations</h3>
+                <p>View your current bookings</p>
+            </div>
+            <span>→</span>
+        </a>
+
+    </section>
+
+
+    <!-- Book Flight -->
+    <section class="main-card" id="book">
+
+        <div class="section-title">
+            <div class="section-icon">✈</div>
+
+            <div>
+                <h2>Book a Flight</h2>
+                <p>Enter your travel information below.</p>
+            </div>
+        </div>
+
         <form action="CreateReservation.php" method="POST">
-            <label>Passenger Name</label>
-            <input type="text" name="name" required>
-            <label>Departure</label>
-            <select name="departure" required>
-                <option value="">Select departure</option>
-                <option value="Iloilo">Iloilo</option>
-                <option value="Manila">Manila</option>
-                <option value="Cebu">Cebu</option>
-                <option value="Davao">Davao</option>
-            </select>
-            <label>Destination</label>
-            <select name="destination" required>
-                <option value="">Select destination</option>
-                <option value="Iloilo">Iloilo</option>
-                <option value="Manila">Manila</option>
-                <option value="Cebu">Cebu</option>
-                <option value="Davao">Davao</option>
-            </select>
-            <label>Flight Date</label>
-            <input type="date" name="flight_date" required>
-            <button type="submit">Book Now</button>
+
+            <div class="booking-grid">
+
+                <div class="input-group">
+                    <label>Passenger Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter passenger name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Departure</label>
+
+                    <select name="departure" required>
+                        <option value="">Choose departure</option>
+                        <option value="Iloilo">Iloilo</option>
+                        <option value="Manila">Manila</option>
+                        <option value="Cebu">Cebu</option>
+                        <option value="Davao">Davao</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Destination</label>
+
+                    <select name="destination" required>
+                        <option value="">Choose destination</option>
+                        <option value="Iloilo">Iloilo</option>
+                        <option value="Manila">Manila</option>
+                        <option value="Cebu">Cebu</option>
+                        <option value="Davao">Davao</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Flight Date</label>
+
+                    <input
+                        type="date"
+                        name="flight_date"
+                        required
+                    >
+                </div>
+
+            </div>
+
+            <button type="submit" class="book-button">
+                Search & Book Flight
+            </button>
+
         </form>
 
-        <h3>Manage Reservations</h3>
-        <a class="button" href="ReadReservation.php">View Reservations</a>
+    </section>
 
-        <form action="UpdateReservation.php" method="POST">
-            <label>Reservation ID to Update</label>
-            <input type="number" name="id" min="1" required>
-            <label>New Passenger Name</label>
-            <input type="text" name="name" required>
-            <button type="submit">Update Name</button>
-        </form>
 
-        <form action="DeleteReservation.php" method="POST">
-            <label>Reservation ID to Delete</label>
-            <input type="number" name="id" min="1" required>
-            <button type="submit" class="danger">Delete Reservation</button>
-        </form>
+    <!-- Reservation Management -->
+    <section class="main-card">
 
-        <a class="view-link" href="Logout.php">Log Out</a>
-    </main>
-    <footer>Kuan Air | WIT BSIT Student Project</footer>
+        <div class="section-title">
+            <div class="section-icon">▣</div>
+
+            <div>
+                <h2>Manage Reservations</h2>
+                <p>Update or cancel an existing reservation.</p>
+            </div>
+        </div>
+
+        <div class="manage-grid">
+
+            <!-- Update -->
+            <div class="manage-box">
+
+                <div class="manage-icon edit">
+                    ✎
+                </div>
+
+                <h3>Update Reservation</h3>
+
+                <p>
+                    Change the passenger name of an existing reservation.
+                </p>
+
+                <form action="UpdateReservation.php" method="POST">
+
+                    <div class="input-group">
+                        <label>Reservation ID</label>
+
+                        <input
+                            type="number"
+                            name="id"
+                            min="1"
+                            placeholder="e.g. 001"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label>New Passenger Name</label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter new name"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="secondary-button">
+                        Update Reservation
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Delete -->
+            <div class="manage-box">
+
+                <div class="manage-icon delete">
+                    ×
+                </div>
+
+                <h3>Cancel Reservation</h3>
+
+                <p>
+                    Cancel an existing reservation using its ID.
+                </p>
+
+                <form action="DeleteReservation.php" method="POST">
+
+                    <div class="input-group">
+                        <label>Reservation ID</label>
+
+                        <input
+                            type="number"
+                            name="id"
+                            min="1"
+                            placeholder="e.g. 001"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="cancel-button">
+                        Cancel Reservation
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Help -->
+    <section class="help-card">
+
+        <div>
+            <h3>Need help?</h3>
+            <p>
+                Make sure your passenger name, destination,
+                and flight date are correct before booking.
+            </p>
+        </div>
+
+        <a href="ReadReservation.php">
+            View My Reservations →
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    JetSetGo | WIT BSIT Student Project
+</footer>
+
 </body>
-</html>
+</html>S
