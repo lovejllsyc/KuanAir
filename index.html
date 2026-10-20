@@ -1,22 +1,128 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuan Air | Welcome</title>
+    <title>JetSetGo | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>KUAN AIR</h1>
-        <p>Your Journey Starts Here</p>
+<body class="home-page">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">JET<span> SETGO</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html" class="home-active">Home</a>
+            <a href="login.html">Log In</a>
+            <a href="register.html" class="nav-button">Get Started</a>
+        </nav>
     </header>
-    <main class="card">
-        <h2>Welcome to Kuan Air</h2>
-        <p>Book and manage your flight reservations in one place.</p>
-        <a class="button" href="login.html">Log In</a>
-        <a class="button secondary" href="register.html">Create Account</a>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="home-badge">✈ YOUR JOURNEY STARTS HERE</span>
+
+                <h1>
+                    The world is<br>
+                    <span>closer than ever.</span>
+                </h1>
+
+                <p class="description">
+                    Plan your next adventure with JetSetGo.
+                    Book flights, organize your travel, and manage
+                    your reservations through one simple platform.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="register.html" class="primary-button">
+                        Create an Account <span>→</span>
+                    </a>
+
+                    <a href="login.html" class="secondary-button">
+                        Sign In
+                    </a>
+                </div>
+
+                <div class="home-note">
+                    <span class="note-icon">✓</span>
+                    <p>Simple booking. Easier journeys.</p>
+                </div>
+            </div>
+
+            <div class="flight-card">
+                <div class="flight-card-top">
+                    <div class="plane-icon">✈</div>
+                    <span class="flight-status">YOUR NEXT ADVENTURE</span>
+                </div>
+
+                <p class="card-label">READY FOR TAKEOFF?</p>
+                <h2>Where will you go?</h2>
+
+                <p class="flight-description">
+                    Your next destination is just a few steps away.
+                    Sign in to start planning your trip.
+                </p>
+
+                <div class="destination-preview">
+                    <div class="destination-point">
+                        <span class="point-dot"></span>
+                        <div>
+                            <small>DEPARTURE</small>
+                            <strong>Your city</strong>
+                        </div>
+                    </div>
+
+                    <div class="route-line">
+                        <span>✈</span>
+                    </div>
+
+                    <div class="destination-point">
+                        <span class="point-dot destination-dot"></span>
+                        <div>
+                            <small>DESTINATION</small>
+                            <strong>Your next stop</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="login.html" class="card-link">
+                    Explore your flights <span>→</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-features">
+            <div class="feature-item">
+                <span class="feature-icon">✈</span>
+                <div>
+                    <h3>Book with Ease</h3>
+                    <p>Enter your travel details in one place.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">▣</span>
+                <div>
+                    <h3>Manage Reservations</h3>
+                    <p>Keep track of your flight bookings.</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <div>
+                    <h3>Simple Experience</h3>
+                    <p>Convenient access to your reservations.</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>Kuan Air | WIT BSIT Student Project</footer>
+
+    <footer class="home-footer">
+        © 2026 JETSETGO | Your journey, our priority.
+    </footer>
+
 </body>
 </html>
