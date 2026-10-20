@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = mysqli_connect('localhost', 'root', '', 'kuan_air');
+$conn = mysqli_connect('localhost', 'root', '', 'jetsetgo');
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
